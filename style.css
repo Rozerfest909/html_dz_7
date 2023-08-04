@@ -244,8 +244,10 @@ summary::-webkit-details-marker {
 }
 
 .sale__item_big {
+	display: hide;
   min-height: 180px;
   grid-column: 1 / -1;
+  background-image: url(img/sibig.jpg);
 }
 
 .sale__text {
@@ -752,15 +754,42 @@ summary::-webkit-details-marker {
     padding-top: 67px;
 
 }
-/* @media (max-width:320px) {
-	.sale {
-		grid-template-columns: repeat(1, 1fr);
-	}
-} */
+
 .promo__heading__fashion {
 	font-style: normal;
 	font-weight: 700;
 	font-size: 32px;
 	line-height: 38px;
 	color:#F16D7F;
+}
+@media (max-width:767px) {
+	.sale {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.promo__img{
+		display: none;
+	}
+	.sale{
+		display: grid;
+    display: flex;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 64px;
+    padding-bottom: 96px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+	}
+	.promo{
+		height: 363px;
+	}
+	.sale__item_big {
+
+		width: 100vh;
+		max-height: 111px;
+		max-width: 360px;
+	}
+
 }
